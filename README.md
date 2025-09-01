@@ -179,6 +179,5 @@ For discussion and support with this maintained fork:
 
 - **Issues & Bug Reports**: [Open an issue](https://github.com/qwenode/entimport/issues/new) on this repository
 - **Feature Requests**: [Submit a feature request](https://github.com/qwenode/entimport/issues/new) with the enhancement label
-- **Discussions**: Use [GitHub Discussions](https://github.com/qwenode/entimport/discussions) for general questions and community support
 
 For historical context or to reference original discussions, you can also check the [original repository](https://github.com/ariga/entimport), though active support is provided through this fork.
