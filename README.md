@@ -1,8 +1,21 @@
 # entimport
 
+> **🔧 Maintained Fork**: This is a community-maintained version of the original [ariga/entimport](https://github.com/ariga/entimport) project. The upstream repository has not been actively maintained, so this fork provides continued development, bug fixes, and feature updates.
+
 `entimport` is a tool for creating [Ent](https://entgo.io/) schemas from existing SQL databases. Currently, `MySQL`
 and `PostgreSQL` are supported. The tool can import to [ent schema](https://entgo.io/docs/schema-def) any number of
 tables, including relations between them.
+
+## Why This Fork Exists
+
+The original [ariga/entimport](https://github.com/ariga/entimport) project has been inactive for an extended period, with no recent updates or maintenance. This community-maintained fork was created to:
+
+- **Continue Development**: Provide ongoing maintenance and updates to keep the tool functional with the latest Go and Ent versions
+- **Bug Fixes**: Address issues and bugs that have been reported but not resolved in the upstream repository  
+- **Community Support**: Offer responsive support and accept community contributions
+- **Feature Updates**: Add new features and improvements based on community needs
+
+We are committed to maintaining this project and keeping it up-to-date with the evolving Go and Ent ecosystems.
 
 ## Installation
 
@@ -39,13 +52,13 @@ The command above will create `<project>/ent/schema/` directory and the file ins
 Installing and running `entimport`
 
 ```shell
-go run ariga.io/entimport/cmd/entimport
+go run github.com/qwenode/entimport/cmd/entimport
 ```
 
 - For example, importing a MySQL schema with `users` table:
 
 ```shell
-go run ariga.io/entimport/cmd/entimport -dsn "mysql://root:pass@tcp(localhost:3308)/test" -tables "users"
+go run github.com/qwenode/entimport/cmd/entimport -dsn "mysql://root:pass@tcp(localhost:3308)/test" -tables "users"
 ```
 
 The command above will write a valid ent schema into the directory specified (or the default `./ent/schema`):
@@ -99,13 +112,13 @@ Usage of ./entimport:
 > Note: add search_path=foo if you use non `public` schema.
 
 ```shell
-go run ariga.io/entimport/cmd/entimport -dsn "postgres://postgres:pass@localhost:5432/test?sslmode=disable" 
+go run github.com/qwenode/entimport/cmd/entimport -dsn "postgres://postgres:pass@localhost:5432/test?sslmode=disable" 
 ```
 
 2. Import ent schema from MySQL database
 
 ```shell
-go run ariga.io/entimport/cmd/entimport -dsn "mysql://root:pass@tcp(localhost:3308)/test"
+go run github.com/qwenode/entimport/cmd/entimport -dsn "mysql://root:pass@tcp(localhost:3308)/test"
 ```
 
 3. Import only specific tables:
@@ -116,13 +129,13 @@ go run ariga.io/entimport/cmd/entimport -dsn "mysql://root:pass@tcp(localhost:33
 > If the `-tables` flags is omitted all tables in current `database schema` will be imported
 
 ```shell
-go run ariga.io/entimport/cmd/entimport -dsn "..." -tables "users,user_friends" 
+go run github.com/qwenode/entimport/cmd/entimport -dsn "..." -tables "users,user_friends" 
 ```
 
 4. Import to another directory:
 
 ```shell
-go run ariga.io/entimport/cmd/entimport -dsn "..." -schema-path "/some/path/here"
+go run github.com/qwenode/entimport/cmd/entimport -dsn "..." -schema-path "/some/path/here"
 ```
 
 ## Future Work
@@ -150,7 +163,22 @@ return []ent.Edge{edge.To("child_users", User.Type), edge.From("parent_users", U
 }
 ```
 
+## License
+
+This project uses a dual licensing approach:
+
+- **Original Code**: The original entimport code from the upstream repository (ariga/entimport) is licensed under the Apache License 2.0. See the [LICENSE](LICENSE) file for details.
+
+- **Fork-Specific Contributions**: New code, modifications, and contributions specific to this fork are licensed under the MIT License. See the [LICENSE-MIT](LICENSE-MIT) file for details.
+
+This dual licensing approach ensures compatibility with the original Apache 2.0 licensed code while providing flexibility for new contributions to the maintained fork. When contributing to this project, new files and significant modifications will be licensed under MIT, while preserving the Apache 2.0 license for existing upstream code.
+
 ## Feedback & Support
 
-For discussion and support, [open an issue](https://github.com/ariga/entimport/issues/new/choose) or join
-our [channel](https://gophers.slack.com/archives/C01FMSQDT53) in the gophers Slack.
+For discussion and support with this maintained fork:
+
+- **Issues & Bug Reports**: [Open an issue](https://github.com/qwenode/entimport/issues/new) on this repository
+- **Feature Requests**: [Submit a feature request](https://github.com/qwenode/entimport/issues/new) with the enhancement label
+- **Discussions**: Use [GitHub Discussions](https://github.com/qwenode/entimport/discussions) for general questions and community support
+
+For historical context or to reference original discussions, you can also check the [original repository](https://github.com/ariga/entimport), though active support is provided through this fork.
