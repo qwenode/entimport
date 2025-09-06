@@ -1,4 +1,4 @@
-package entimport
+package main
 
 import (
     "context"
