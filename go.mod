@@ -1,11 +1,9 @@
 module github.com/qwenode/entimport
 
-go 1.24.0
-
-toolchain go1.24.3
+go 1.24.6
 
 require (
-	ariga.io/atlas v0.36.1
+	ariga.io/atlas v0.37.0
 	entgo.io/contrib v0.7.0
 	entgo.io/ent v0.14.5
 	github.com/go-openapi/inflect v0.21.3
