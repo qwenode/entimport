@@ -11,7 +11,7 @@ require (
 	github.com/go-openapi/inflect v0.21.3
 	github.com/go-sql-driver/mysql v1.9.3
 	github.com/google/uuid v1.6.0
-	github.com/lib/pq v1.10.9
+	github.com/lib/pq v1.11.1
 	github.com/stretchr/testify v1.11.1
 )
 
