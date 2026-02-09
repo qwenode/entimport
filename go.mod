@@ -1,11 +1,9 @@
 module github.com/qwenode/entimport
 
-go 1.24.0
-
-toolchain go1.24.3
+go 1.24.11
 
 require (
-	ariga.io/atlas v0.36.1
+	ariga.io/atlas v1.1.0
 	entgo.io/contrib v0.7.0
 	entgo.io/ent v0.14.5
 	github.com/go-openapi/inflect v0.21.3
@@ -29,6 +27,7 @@ require (
 	github.com/jhump/protoreflect v1.17.0 // indirect
 	github.com/mitchellh/go-wordwrap v1.0.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
+	github.com/rogpeppe/go-internal v1.14.1 // indirect
 	github.com/stretchr/objx v0.5.2 // indirect
 	github.com/zclconf/go-cty v1.16.4 // indirect
 	github.com/zclconf/go-cty-yaml v1.1.0 // indirect
